@@ -24,7 +24,7 @@ const btnAnalytics = document.getElementById('btnAnalytics');
 const administrative = document.getElementById('administrative');
 
 administrative.addEventListener('click', () =>{
-  changePage.href="/administrative/administrative.html";
+  changePage.href="/administrative.html";
 });
 
 btnComputer.addEventListener('click', () =>{
