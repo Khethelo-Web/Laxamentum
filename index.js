@@ -21,6 +21,11 @@ function closeSidebar() {
 
 const btnComputer = document.getElementById('btnComputer');
 const btnAnalytics = document.getElementById('btnAnalytics');
+const administrative = document.getElementById('administrative');
+
+administrative.addEventListener('click', () =>{
+  changePage.href="client.html";
+});
 
 btnComputer.addEventListener('click', () =>{
   window.location.href="/Framework/Computer/computer.html";
