@@ -18,10 +18,9 @@ function closeSidebar() {
 }
 
 
-
+const administrative = document.querySelector('.administrative');
 const btnComputer = document.getElementById('btnComputer');
 const btnAnalytics = document.getElementById('btnAnalytics');
-const administrative = document.getElementById('administrative');
 
  btnComputer.addEventListener('click', () =>{
   administrative.href="administrative.html";
