@@ -112,7 +112,7 @@ body {
     font-weight: 600;
   }
 
-  .area-chart{
+  #area-chart{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,12 +121,12 @@ body {
     padding: 2rem;
   }
 
-  .area-chart span{
+  #area-chart span{
     font-size: 7rem;
     color: #246dec;
   }
 
-  #bar-chart{
+  .bar-chart{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +135,7 @@ body {
     padding: 2rem;
   }
   
-  #bar-chart span{
+  .bar-chart span{
     font-size: 7rem;
     color: #246dec;
   }
