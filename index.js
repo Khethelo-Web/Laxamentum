@@ -24,5 +24,5 @@ const btnAnalytics = document.getElementById('btnAnalytics');
 const administrative = document.getElementById('administrative');
 
  btnComputer.addEventListener('click', () =>{
-  administrative.href="/administrative.html";
+  administrative.href="/administrative";
 });
