@@ -46,7 +46,9 @@
 
           <div class="charts-card">
             <div class="categories">
-              <a href="Beginner/beginner.html" class="efficiency">Beginner</a>
+              <a href="Beginner/beginner.html" class="efficiency">
+                <button class="btnBeginner">Beginner</button>
+              </a>
               <a class="automation">Medium</a>
               <a class="analytical">Difficult</a>
             </div>
@@ -63,5 +65,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <!-- Custom JS -->
     <script src="administrative/administrative.js"></script>
+    <script type="module">
+
+        const efficiency = document.querySelector('.efficiency');
+        const btnBeginner = document.querySelector('.btnBeginner');
+       
+        btnBeginner.addEventListener('click', () => {
+            efficiency.href="Beginner/beginner.html";
+        });
+        
+        
+
+    </script>
   </body>
 </html>
