@@ -19,7 +19,7 @@ function closeSidebar() {
 
 
 
-const btnComputer = document.getElementById('btnComputer');
+const btnAministrative = document.getElementById('btnAdministrative');
 const btnAnalytics = document.getElementById('btnAnalytics');
 const administrative = document.getElementById('administrative');
 
