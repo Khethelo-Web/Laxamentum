@@ -126,7 +126,7 @@ body {
     color: #246dec;
   }
 
-  .bar-chart{
+  #bar-chart{
     display: flex;
     align-items: center;
     justify-content: center;
