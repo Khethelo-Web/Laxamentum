@@ -91,7 +91,7 @@ body {
     justify-content: space-evenly;
   }
   
-  .charts-card {
+  #charts-card {
     list-style: none;
     text-decoration: none;
     background-color: #ffffff;
