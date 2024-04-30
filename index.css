@@ -135,7 +135,7 @@ body {
     padding: 2rem;
   }
   
-  .bar-chart span{
+  #bar-chart span{
     font-size: 7rem;
     color: #246dec;
   }
