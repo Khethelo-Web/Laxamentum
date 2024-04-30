@@ -121,6 +121,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .promptPage{
+    text-decoration: none;
+  }
+
   .prompt{
     padding: 1rem 1rem;
     cursor: pointer;
