@@ -121,7 +121,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .promptPage{
+  a{
     text-decoration: none;
   }
 
