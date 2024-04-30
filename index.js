@@ -19,10 +19,10 @@ function closeSidebar() {
 
 
 
-const btnAministrative = document.getElementById('btnAdministrative');
+const btnComputer = document.getElementById('btnComputer');
 const btnAnalytics = document.getElementById('btnAnalytics');
 const administrative = document.getElementById('administrative');
 
- btnAministrative.addEventListener('click', () =>{
+ btnComputer.addEventListener('click', () =>{
   administrative.href="administrative.html";
 });
