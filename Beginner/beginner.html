@@ -96,7 +96,9 @@
 
             console.log(promptName);
             for (name in promptName){
-              const prompt = document.createElement("p");
+              const promptPage = document.createElement("a");
+              promptPage.classList.add('promptPage');
+              const prompt = document.createElement("button");
               prompt.classList.add('prompt');
               prompt.id = promptName[name];
               prompt.innerHTML = promptName[name];
@@ -106,10 +108,11 @@
                 localStorage.setItem('promptName', prompt.innerHTML);
               })
 
-              categories.appendChild(prompt);
+              promptPage.appendChild(prompt);
+              categories.appendChild(promptPage);
 
               prompt.addEventListener("click", () => {
-                window.location.href = "prompt/prompt.html";
+                administrative.href="prompt/prompt.html";
               })
             }
         });
