@@ -23,6 +23,6 @@ const btnAministrative = document.getElementById('btnAdministrative');
 const btnAnalytics = document.getElementById('btnAnalytics');
 const administrative = document.getElementById('administrative');
 
- btnComputer.addEventListener('click', () =>{
+ btnAministrative.addEventListener('click', () =>{
   administrative.href="administrative.html";
 });
