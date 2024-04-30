@@ -133,11 +133,11 @@ body {
     align-items: center;
     justify-content: center;
     background: transparent;
+    border: none;
   }
 
   .efficiency{
     width: 100%;
-    padding: 1rem;
     cursor: pointer;
     margin: 0;
     display: flex;
