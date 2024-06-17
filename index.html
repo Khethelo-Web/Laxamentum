@@ -44,21 +44,21 @@
 
         <div class="charts">
 
-          <a id="charts-card" class="administrative">
+          <a href="/administrative/adminstrative.html" class="charts-card">
             <p class="chart-title">Administrative</p>
-            <div class="btnComputer" id="bar-chart">
+            <div id="btnComputer" class="bar-chart">
               <span class="material-icons-outlined">computer</span>
             </div>
           </a>
 
-          <a href="/finance/finance.html" id="charts-card">
+          <a href="/finance/finance.html" class="charts-card">
             <p class="chart-title">Finance</p>
             <div id="btnAnalytics" class="area-chart">
               <span class="material-icons-outlined" style="display: flex; align-items: center;">money</span>
             </div>
           </a>
 
-          <a href="/sales/sales.html" id="charts-card">
+          <a href="/sales/sales.html" class="charts-card">
             <p class="chart-title">Sales</p>
             <div id="btnAnalytics" class="area-chart">
               <span class="material-icons-outlined" style="display: flex; align-items: center;">analytics</span>
@@ -75,18 +75,6 @@
     <!-- ApexCharts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <!-- Custom JS -->
-    <script src="index.js"></script>
-    <script type="module">
-
-        const administrative = document.querySelector('.administrative');
-        const btnComputer = document.querySelector('.btnComputer');
-       
-        btnComputer.addEventListener('click', () => {
-            administrative.href="administrative.html";
-        });
-        
-        
-
-    </script>
+    <script src="admin.js"></script>
   </body>
 </html>

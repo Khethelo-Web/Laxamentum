@@ -88,16 +88,15 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   
   .charts-card {
-    list-style: none;
-    text-decoration: none;
+    justify-self: center;
     background-color: #ffffff;
     margin-bottom: 20px;
-    padding: 25px;
-    box-sizing: border-box;
+    width: 70%;
+    padding: 25px 35px;
     -webkit-column-break-inside: avoid;
     border: 1px solid #d2d2d3;
     border-radius: 5px;
@@ -110,6 +109,64 @@ body {
     justify-content: center;
     font-size: 22px;
     font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .categories{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .prompt{
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prompt:hover{
+    background-color: #e0cdcd;
+    transition: all ease-in-out 0.4s;
+  }
+
+  .chart-prompt{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .addPrompt{
+    margin-right: 5px;
+    padding: 1rem 0;
+    width: 70%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+  .viewPrompt{
+    margin-left: 5px;
+    padding: 1rem 0;
+    width: 70%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    border: none;
   }
 
   .area-chart{
@@ -127,12 +184,46 @@ body {
   }
 
   .bar-chart{
+    display: none;
+  }
+
+  .bar-chart.active{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    font-weight: 600;
+    flex-direction: column;
     padding: 2rem;
+    background-color: #e0cdcd;
+  }
+
+  .addPrompt-container{
+    display: none;
+  }
+
+  .addPrompt-container.active{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .prompt-content{
+    margin-bottom: 1.2rem;
+  }
+
+  .prompt-label{
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input{
+    width: 60%;
+    height: 20px;
+  }
+
+  .btnUpload{
+    height: 25px;
+    cursor: pointer;
   }
   
   .bar-chart span{

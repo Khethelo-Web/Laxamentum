@@ -19,3 +19,13 @@ function closeSidebar() {
 
 
 
+const btnComputer = document.getElementById('btnComputer');
+const btnAnalytics = document.getElementById('btnAnalytics');
+
+btnComputer.addEventListener('click', () =>{
+  window.location.href="/Framework/Computer/computer.html";
+});
+
+btnAnalytics.addEventListener('click', () =>{
+  window.location.href="/Framework/Analytics/analytics.html";
+});

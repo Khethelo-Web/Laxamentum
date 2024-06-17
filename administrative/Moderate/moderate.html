@@ -15,7 +15,7 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/prompt/prompt.css">
+    <link rel="stylesheet" href="/administrative/Beginner/beginner.css">
   </head>
   <body>
     <div class="grid-container">
@@ -39,12 +39,15 @@
       <!-- Main -->
       <main class="main-container">
         <div class="main-title">
-          <p class="font-weight-bold" id="prompt_guide">Administrative</p>
+          <p class="font-weight-bold">Moderate</p>
         </div>
 
         <div class="charts">
 
           <div class="charts-card">
+            <div class="chart-header">
+                <p class="chart-title">Beginner</p>
+            </div>
             <div class="categories">
             </div>
           </div>
@@ -59,7 +62,7 @@
     <!-- ApexCharts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <!-- Custom JS -->
-    <script src="/prompt/prompt.js"></script>
+    <script src="/Beginner/beginner.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
@@ -84,37 +87,33 @@
       const dbRef = ref(getDatabase());
 
       const categories = document.querySelector('.categories');
-      var prompt_guide = document.getElementById('prompt_guide');
 
 
-      var promptName_fetch = localStorage.getItem("promptName");
-      var database_key = localStorage.getItem("Key");
-
-      prompt_guide.innerHTML = database_key;
-
-      get(child(dbRef, `${database_key}/`)).then((snapshot) => {
-        snapshot.forEach(childSnapshot => {
-            var data = childSnapshot.val();
-            var promptName = Object.keys(data);
-            var promptText = Object.values(data);
-            console.log(promptName_fetch);
-            for (name in promptName){
-              if (promptName_fetch == promptName[name]){
-                const promptTitle = document.createElement("p");
-                promptTitle.classList.add('promptName');
-                promptTitle.innerHTML = promptName[name];
-                categories.appendChild(promptTitle);
-                const promptContext = document.createElement("p");
-                promptContext.classList.add('promptContext');
-                promptContext.innerHTML = promptText[name];
-                categories.appendChild(promptContext);
-              }
-
-              
-              
-            }
-        });
+      get(child(dbRef, 'Administrative/')).then((snapshot) => {
+        var dataDict = snapshot.val();
         
+        var newValues = Object.values(dataDict)[1];
+        var promptName = Object.keys(newValues);
+        
+        console.log(dataDict);
+        for (name in promptName){
+          const prompt = document.createElement("p");
+          prompt.classList.add('prompt');
+          prompt.id = promptName[name];
+          prompt.innerHTML = promptName[name];
+
+          prompt.addEventListener('click', () => {
+            console.log(prompt.innerHTML);
+            localStorage.setItem('promptName', prompt.innerHTML);
+          })
+
+          categories.appendChild(prompt);
+
+          prompt.addEventListener("click", () => {
+            localStorage.setItem("Key", "Administrative");
+            window.location.href = "/prompt/prompt.html";
+          })
+        }
       });
         
     </script>
