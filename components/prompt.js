@@ -9,22 +9,6 @@ var btnEfficiency = document.querySelector('.efficiency');
 var btnAutomation = document.querySelector('.automation');
 var btnAnalytical = document.querySelector('.analytical');
 
-btnEfficiency.addEventListener('click', () => {
-  barChart.classList.add("active");
-})
-
-btnAutomation.addEventListener('click', () => {
-  barChart.classList.add("active");
-})
-
-btnAnalytical.addEventListener('click', () => {
-  barChart.classList.add("active");
-})
-
-btnAddPrompt.addEventListener('click', () => {
-    addPrompt.classList.add("active");
-})
-
 
 
 function closeSidebar() {
