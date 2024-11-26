@@ -43,25 +43,25 @@ notification.addEventListener('click', () => {
 btnAdministrative.addEventListener('click', () => {
   localStorage.setItem("Key", "Administrative");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnFinance.addEventListener('click', () => {
   localStorage.setItem("Key", "Finance");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnSales.addEventListener('click', () => {
   localStorage.setItem("Key", "Sales");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnProgramming.addEventListener('click', () => {
   localStorage.setItem("Key", "Programming");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 
