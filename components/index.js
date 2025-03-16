@@ -43,43 +43,43 @@ notification.addEventListener('click', () => {
 btnAccounting.addEventListener('click', () => {
   localStorage.setItem("Key", "Accounting");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnAdministrative.addEventListener('click', () => {
   localStorage.setItem("Key", "Administrative");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnExcel.addEventListener('click', () => {
   localStorage.setItem("Key", "Excel");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnFinance.addEventListener('click', () => {
   localStorage.setItem("Key", "Finance");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnSales.addEventListener('click', () => {
   localStorage.setItem("Key", "Sales");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnProgramming.addEventListener('click', () => {
   localStorage.setItem("Key", "Programming");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 btnDataAnalysis.addEventListener('click', () => {
   localStorage.setItem("Key", "DataAnalysis");
   localStorage.setItem("Level", "Beginner");
-  window.location.href = "/level.html";
+  window.location.href = "level.html";
 });
 
 
