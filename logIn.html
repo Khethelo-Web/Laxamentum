@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="logIn.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Document</title>
+    <title>Laxamentum</title>
 </head>
 <body>
     <section class="landingPage">
@@ -106,7 +106,7 @@
                 // Signed up 
                 const user = userCredential.user;
                 alert("Welcome to Laxamentum!");
-                window.location.href = '/index.html';
+                window.location.href = 'index.html';
                 // ...
             })
             .catch((error) => {
@@ -129,7 +129,7 @@
                 // Signed in 
                 const user = userCredential.user;
                 alert("Welcome back!")
-                window.location.href = '/index.html';
+                window.location.href = 'index.html';
             })
             .catch((error) => {
                 const errorCode = error.code;
