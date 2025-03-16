@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logIn.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="landingPage">
+        <p class="header">Laxamentum</p>
+        <div class="container">
+            <div class="form-box">
+                <p id="account">Log into account</p>
+                <h1 id="title">Sign Up</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <box-icon type='solid' name='user'></box-icon>
+                            <input type="text" id="username" placeholder="Name">
+                        </div>
+    
+                        <div class="input-field">
+                            <box-icon type='solid' name='envelope'></box-icon>
+                            <input type="text" id="email" placeholder="Email">
+                        </div>
+    
+                        <div class="input-field">
+                            <box-icon type='solid' name='lock-alt'></box-icon>
+                            <input type="password" id="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="btnLogIn" class="btnLogIn">Log In</button>
+                        
+                        <button type="button" id="btnSignUp" class="btnSignUp">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCDXvLlGvCOQzKwrWSB9uqV-nRyFxWHu8M",
+      authDomain: "laxamentum-28171.firebaseapp.com",
+      projectId: "laxamentum-28171",
+      storageBucket: "laxamentum-28171.firebasestorage.app",
+      messagingSenderId: "21326187607",
+      appId: "1:21326187607:web:82a5ae29022e9507faa712",
+      measurementId: "G-1122L0MGEB"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    let btnAcccount = document.getElementById('account');
+    let btnSignup = document.getElementById('btnSignUp');
+    let btnLogin = document.getElementById('btnLogIn');
+    let nameField = document.getElementById('nameField');
+    const username =document.getElementById('username');
+    let title = document.getElementById('title');
+    btnLogin.classList.add("disabled");
+    let toggle=true;
+
+    nameField.style.maxHeight = "0";
+
+    btnAcccount.addEventListener('click', (e) => {
+        if (toggle){
+            btnAcccount.innerHTML="Create an account"
+            title.innerHTML = "Log In";
+            btnLogin.classList.remove("disabled");
+            btnSignup.classList.add("disabled");
+            toggle= false;
+        }else if (!toggle){
+            btnAcccount.innerHTML="Log into account"
+            title.innerHTML = "Sign Up";
+            btnSignup.classList.remove("disabled");
+            btnLogin.classList.add("disabled");
+            toggle=true;
+        }
+    })
+
+    btnSignup.addEventListener('click', (e) => {
+
+        console.log("Hello World")
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed up 
+                const user = userCredential.user;
+                alert("Welcome to Laxamentum!");
+                window.location.href = '/index.html';
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+                // ..
+        });    
+    })
+
+    
+
+    btnLogin.addEventListener('click', (e) =>{
+
+        var password = document.getElementById('password').value;
+        var email = document.getElementById('email').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                alert("Welcome back!")
+                window.location.href = '/index.html';
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+        });
+    })
+
+  </script>
+</html>
